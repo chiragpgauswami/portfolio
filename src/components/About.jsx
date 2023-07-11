@@ -43,13 +43,16 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor rem
-        itaque corrupti provident repudiandae praesentium inventore dolorem,
-        saepe, quisquam, amet aut officiis similique eaque consectetur
-        exercitationem nulla unde delectus perferendis fugit! Nihil fugit
-        corrupti aperiam molestias? Ipsum, nostrum veniam vitae necessitatibus
-        dicta suscipit recusandae ullam ratione repellat placeat dolore
-        praesentium velit culpa expedita aliquam doloribus illo ex voluptas
+        Hi, I'm Chirag, a full-stack web developer and freelancer. I'm
+        proficient in React, Vue.js, HTML, CSS, JS, Bootstrap, Tailwind,
+        Laravel, Express, Node, .NET, WordPress, MongoDB, SQL, and Microsoft SQL
+        Server. I'm also experienced in digital marketing. I'm passionate about
+        building great web applications that solve real-world problems. I'm a
+        hard worker and am always willing to go the extra mile. I'm also a great
+        communicator and am able to work effectively with both clients and team
+        members. If you're looking for a talented and experienced full-stack web
+        developer, I'm the perfect candidate. I'm confident that I can use my
+        skills and experience to make a positive impact on the world
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">

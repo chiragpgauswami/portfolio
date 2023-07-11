@@ -5,6 +5,7 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+import { toast } from "react-toastify";
 
 const Contact = () => {
   const formRef = useRef();
@@ -17,9 +18,69 @@ const Contact = () => {
 
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {};
+  const handleChange = (e) => {
+    const { name, value } = e.target;
 
-  const handleSubmit = (e) => {};
+    setForm({
+      ...form,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    emailjs
+      .send(
+        "service_w4s5cul",
+        "template_4nc2rb5",
+        {
+          from_name: form.name,
+          to_name: "Chirag",
+          from_email: form.email,
+          to_email: "chiragpgauswami@gmail.com",
+          message: form.message,
+        },
+        "oPzVgo_X2ge1V2h2xx"
+      )
+      .then(() => {
+        setLoading(false);
+        toast.success(
+          "Thank you. I will get back to you as soon as possible.",
+          {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          }
+        );
+
+        setForm({
+          name: "",
+          email: "",
+          message: "",
+        });
+      })
+      .catch((error) => {
+        setLoading(false);
+
+        toast.error("Something went wrong.", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
+      });
+  };
 
   return (
     <div
