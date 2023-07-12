@@ -1,4 +1,3 @@
-import React from "react";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
@@ -52,7 +51,7 @@ const About = () => {
         communicator and am able to work effectively with both clients and team
         members. If you're looking for a talented and experienced full-stack web
         developer, I'm the perfect candidate. I'm confident that I can use my
-        skills and experience to make a positive impact on the world
+        skills and experience to make a positive impact on the world.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">

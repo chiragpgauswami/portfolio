@@ -10,6 +10,7 @@ import {
   Tech,
   Works,
   StarsCanvas,
+  Footer,
 } from "./components";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -42,6 +43,7 @@ const App = () => {
         <div className="relative z-0">
           <Contact />
           <StarsCanvas />
+          <Footer />
         </div>
       </div>
     </BrowserRouter>
