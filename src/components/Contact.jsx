@@ -33,16 +33,16 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_w4s5cul",
-        "template_4nc2rb5",
+        "your_service_id",
+        "your_template_id",
         {
           from_name: form.name,
-          to_name: "Chirag",
+          to_name: "to_name",
           from_email: form.email,
-          to_email: "chiragpgauswami@gmail.com",
+          to_email: "to_email@mail.com",
           message: form.message,
         },
-        "oPzVgo_X2ge1V2h2xx"
+        "your_publickey"
       )
       .then(() => {
         setLoading(false);
